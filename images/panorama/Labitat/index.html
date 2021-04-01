@@ -1,0 +1,641 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Labitat Virtual Tour Version 1.0</title>
+    <link rel="stylesheet" href="https://cdn.pannellum.org/2.2/pannellum.css"/>
+    <script type="text/javascript" src="https://cdn.pannellum.org/2.2/pannellum.js"></script>
+    <style>
+    #panorama {
+        width: 100%;
+        height: 100%;
+    }
+	body {
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		position: fixed;
+		cursor: default;
+		width: 100%;
+		height: 100%;
+	}
+    </style>
+</head>
+<body>
+
+<div id="panorama"></div>
+<script>
+pannellum.viewer('panorama', { 
+	
+	"autoLoad": true,  
+    
+	    /*
+     * Uncomment the next line to print the coordinates of mouse clicks
+     * to the browser's developer console, which makes it much easier
+     * to figure out where to place hot spots. Always remove it when
+     * finished, though.
+     */
+    //"hotSpotDebug": true,
+	
+	
+	"default": {
+        "firstScene": "front",
+        //"author": "Søren G Sørensen",
+        "sceneFadeDuration": 1000
+    },
+
+    "scenes": {
+        "front": {
+            "title": "Entrance",
+            "hfov": 110,
+            "pitch": -23.2,
+            "yaw": -131.9,
+            "type": "equirectangular",
+            "panorama": "/panorama/Labitat/LabiPano/front.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -20.8,
+                    "yaw": -102.5,
+                    "type": "scene",
+                    "text": "Lobby",
+                    "sceneId": "room01_1"
+                },
+				{
+					"pitch": 0.89,
+					"yaw": 142.6,
+					"type": "info",
+					"text": "FAKTA"
+				}
+            ]
+        },
+		
+        "room01_1": {
+            "title": "Lobby (Room 1)",
+            "hfov": 120,
+            "pitch": -11.39,
+            "yaw": -51.23,
+            "type": "equirectangular",
+            "panorama": "/panorama/Labitat/LabiPano/room01_1.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -20.8,
+                    "yaw": -102.5,
+                    "type": "scene",
+                    "text": "Dirty Room",
+                    "sceneId": "dirtyroom"
+                },
+                {
+                    "pitch": -4.2,
+                    "yaw": 4.7,
+                    "type": "scene",                  
+                    "sceneId": "room01_2"
+                },				
+                {
+                    "pitch": -7,
+                    "yaw": 110.5,
+                    "type": "scene",
+                    "text": "Entrance",
+                    "sceneId": "front"
+                }
+            ]
+        },
+		
+        "room01_2": {
+            "title": "Lobby (Room 1)",
+            "hfov": 110,
+            "pitch": -8.368,
+            "yaw": 0.6397,
+            "type": "equirectangular",
+            "panorama": "/panorama/Labitat/LabiPano/room01_2.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -0.47,
+                    "yaw": -139.9,
+                    "type": "scene",
+                    "sceneId": "room01_1"
+                },
+                {
+                    "pitch": -0.115,
+                    "yaw": 21.85,
+                    "type": "scene",
+                    "sceneId": "room01_4"
+                },	
+                {
+                    "pitch": -3,
+                    "yaw": -19.36,
+                    "type": "scene",
+                    "sceneId": "room01_3"
+                }
+            ]
+        },
+
+        "room01_3": {
+            "title": "Lobby (Room 1)",
+            "hfov": 110,
+            "pitch": -8.38,
+            "yaw": 0.4167,
+            "type": "equirectangular",
+            "panorama": "/panorama/Labitat/LabiPano/room01_3.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -3.48,
+                    "yaw": -1.915,
+                    "type": "scene",
+                    "text": "Food Lab",
+                    "sceneId": "room02_1"
+                },
+                {
+                    "pitch": -3.988,
+                    "yaw": 179.4,
+                    "type": "scene",
+                    "sceneId": "room01_2"
+                }				
+            ]
+        },
+		
+        "room01_4": {
+            "title": "Lobby (Room 1)",
+            "hfov": 110,
+            "pitch": -12.66,
+            "yaw": -125.6,
+            "type": "equirectangular",
+            "panorama": "/panorama/Labitat/LabiPano/room01_4.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -3.66,
+                    "yaw": 160.76,
+                    "type": "scene",
+                    "sceneId": "room01_2"
+                }
+            ]
+        },		
+		
+        "dirtyroom": {
+            "title": "Dirty room (Room 8)",
+            "hfov": 120,
+            "pitch": -8.8,
+            "yaw": -19.85,
+            "type": "equirectangular",
+            "panorama": "/panorama/Labitat/LabiPano/dirtyroom.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -1.64,
+                    "yaw": 84.16,
+                    "type": "scene",
+                    "text": "Lobby",
+                    "sceneId": "room01_1"
+                }
+            ]
+        },		
+		
+        "room02_1": {
+            "title": "Food Lab (Room 2)",
+            "hfov": 120,
+            "pitch": -12.24,
+            "yaw": 69.223,
+            "type": "equirectangular",
+            "panorama": "/panorama/Labitat/LabiPano/room02_1.jpg",
+            "hotSpots": [
+                {
+                    "pitch": 1.02,
+                    "yaw": -114.1,
+                    "type": "scene",
+                    "text": "Lobby",
+                    "sceneId": "room01_3",
+                    "targetYaw": -175.65,
+                    "targetPitch": -11.33
+                },
+				                {
+                    "pitch": 1.8,
+                    "yaw": -66.959,
+                    "type": "scene",
+                    "sceneId": "room02_3"
+                },
+				                {
+                    "pitch": -3.627,
+                    "yaw": 91.529,
+                    "type": "scene",
+                    "sceneId": "room02_2"
+                },
+				//HOTSPOTS
+				{
+					"pitch": 0,
+					"yaw": -45,
+					"type": "info",
+					"text": "Kitchen"
+				},
+				{
+					"pitch": -9.4,
+					"yaw": 222.6,
+					"type": "info",
+					"text": "Alfred"
+				},
+				{
+					"pitch": 7,
+					"yaw": 117,
+					"type": "info",
+					"text": "Jumbotron"
+				}
+            ]
+        },
+		
+        "room02_2": {
+            "title": "Food Lab (Room 2)",
+            "hfov": 110,
+            "pitch": -11.33,
+            "yaw": -136.692,
+            "type": "equirectangular",
+            "panorama": "/panorama/Labitat/LabiPano/room02_2.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -0.265,
+                    "yaw": 0.993,
+                    "type": "scene",
+                    "sceneId": "room02_1",
+					"targetYaw": -94.7,
+                    "targetPitch": 7.38
+                },
+                {
+                    "pitch": 1.329,
+                    "yaw": -146.49,
+                    "type": "scene",
+                    "sceneId": "room03_1",
+                    "text": "Mediterranean room"
+                }
+            ]
+        },
+
+        "room02_3": {
+            "title": "Food Lab (Room 2)",
+            "hfov": 110,
+            "pitch": -11.4,
+            "yaw": -56.028,
+            "type": "equirectangular",
+            "panorama": "/panorama/Labitat/LabiPano/room02_3.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -7.3359,
+                    "yaw": -99.386,
+                    "type": "scene",
+                    "text": "Pantry",
+                    "sceneId": "room02_4"
+                },
+               {
+                    "pitch": 0.321,
+                    "yaw": 131.99,
+                    "type": "scene",
+                    "text": "Lobby",
+                    "sceneId": "room01_3",
+                    "targetYaw": -175.65,
+                    "targetPitch": -11.33
+                },
+                {
+                    "pitch": -0.065,
+                    "yaw": 73.849,
+                    "type": "scene",
+                    "sceneId": "room02_1"
+                }
+            ]
+        },
+
+        "room02_4": {
+            "title": "Pantry (Room 7)",
+            "hfov": 120,
+            "pitch": -12.159,
+            "yaw": 0.6369,
+            "type": "equirectangular",
+            "panorama": "/panorama/Labitat/LabiPano/room02_4.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -5.86,
+                    "yaw": -172.719,
+                    "type": "scene",
+                    "text": "Food Lab",					
+                    "sceneId": "room02_3",
+					"targetYaw": 88.85,
+                    "targetPitch": -10.068
+                }
+            ]
+        },
+
+        "room03_1": {
+            "title": "Mediterranean room (Room 3)",
+            "hfov": 120,
+            "pitch": -8.9,
+            "yaw": -48.7,
+            "type": "equirectangular",
+            "panorama": "/panorama/Labitat/LabiPano/room03_1.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -4.67,
+                    "yaw": -94,
+                    "type": "scene",
+                    "text": "Rep Rap Room",
+                    "sceneId": "bio"
+                },
+                {
+                    "pitch": -3.735,
+                    "yaw": 160.29,
+                    "type": "scene",
+                    "text": "Food Lab",
+                    "sceneId": "room02_2",
+                    "targetPitch": -11.09,
+					"targetYaw": -7.07				
+                },
+                {
+                    "pitch": -0.97,
+                    "yaw": 5.232,
+                    "type": "scene",
+                    "text": "Tron Lab",
+                    "sceneId": "room04_1"
+                },
+                {
+                    "pitch": 0.0038,
+                    "yaw": -13.45,
+                    "type": "scene",
+                    "sceneId": "room03_2"
+                }				
+            ]
+        },
+
+        "room03_2": {
+            "title": "Mediterranean room (Room 3)",
+            "hfov": 110,
+            "pitch": -13.23,
+            "yaw": 54.64,
+            "type": "equirectangular",
+            "panorama": "/panorama/Labitat/LabiPano/room03_2.jpg",
+            "hotSpots": [
+                {
+                    "pitch": 0.98,
+                    "yaw": 79.63,
+                    "type": "scene",
+                    "text": "Crap Lab",
+                    "sceneId": "bathroom"
+                },
+                {
+                    "pitch": 1.097,
+                    "yaw": 161.06,
+                    "type": "scene",
+                    "text": "Tron Lab",
+                    "sceneId": "room04_1"
+                },
+                {
+                    "pitch": -1.45,
+                    "yaw": -147.94,
+                    "type": "scene",
+                    "sceneId": "room03_1",
+					"targetPitch": -8.63,
+					"targetYaw": -143.48
+                }				
+            ]
+        },
+
+        "bio": {
+            "title": "Rep Rap Room (Room 5)",
+            "hfov": 120,
+            "pitch": -3.14,
+            "yaw": -59.9,
+            "type": "equirectangular",
+            "panorama": "/panorama/Labitat/LabiPano/bio.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -5.97,
+                    "yaw": 169.27,
+                    "type": "scene",
+                    "text": "Mediterranean Room",
+                    "sceneId": "room03_1",
+					"targetPitch": -8.37,
+					"targetYaw": 109.33	
+                }
+            ]
+        },
+
+        "bathroom": {
+            "title": "Crap Lab (Room 6)",
+            "hfov": 110,
+            "pitch": -15.137,
+            "yaw": 22.39,
+            "type": "equirectangular",
+            "panorama": "/panorama/Labitat/LabiPano/bathroom.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -9.275,
+                    "yaw": -100.316,
+                    "type": "scene",
+                    "text": "Mediterranean Room",
+                    "sceneId": "room03_2",
+					"targetPitch": -17.417,
+					"targetYaw": 173.618
+                }
+            ]
+        },
+
+        "room04_1": {
+            "title": "Tron Lab (Room 4)",
+            "hfov": 120,
+            "pitch": -7.8937,
+            "yaw": 13.77,
+            "type": "equirectangular",
+            "panorama": "/panorama/Labitat/LabiPano/room04_1.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -1.1535,
+                    "yaw": -61.23,
+                    "type": "scene",
+                    "text": "Mediterranean Room",
+                    "sceneId": "room03_1",
+					"targetPitch": -8.63,
+					"targetYaw": -143.48
+                },
+                {
+                    "pitch": -3.8,
+                    "yaw": -13.245,
+                    "type": "scene",
+                    "sceneId": "room04_3"
+                },
+                {
+                    "pitch": -2.1554,
+                    "yaw": 16.1223,
+                    "type": "scene",
+                    "sceneId": "room04_5"
+                },
+                {
+                    "pitch": -0.26,
+                    "yaw": 45.278,
+                    "type": "scene",
+                    "sceneId": "room04_4"
+                }
+            ]
+        },
+
+        "room04_2": {
+            "title": "Tron Lab (Room 4)",
+            "hfov": 110,
+            "pitch": -16.818,
+            "yaw": -165.218,
+            "type": "equirectangular",
+            "panorama": "/panorama/Labitat/LabiPano/room04_2.jpg",
+            "hotSpots": [
+                                {
+                    "pitch": -2.34,
+                    "yaw": -123.44,
+                    "type": "scene",
+                    "sceneId": "room04_3",
+					"targetPitch": -14.13,
+					"targetYaw": -100.048					
+                },
+                {
+                    "pitch": -8.09,
+                    "yaw": -158.89,
+                    "type": "scene",
+                    "sceneId": "room04_5",
+					"targetPitch": -2.71,
+					"targetYaw": 178.7
+                },	
+                {
+                    "pitch": 0.5192,
+                    "yaw": -190.25,
+                    "type": "scene",
+                    "sceneId": "room04_4",
+					"targetPitch": -12.108,
+					"targetYaw": 136.23					
+                }
+            ]
+        },
+
+        "room04_3": {
+            "title": "Tron Lab (Room 4)",
+            "hfov": 120,
+            "pitch": -14.499,
+            "yaw": 128.33,
+            "type": "equirectangular",
+            "panorama": "/panorama/Labitat/LabiPano/room04_3.jpg",
+            "hotSpots": [
+                 {
+                    "pitch": -0.358,
+                    "yaw": -52.85,
+                    "type": "scene",
+                    "text": "Mediterranean Room",
+                    "sceneId": "room03_1",
+					"targetPitch": -8.63,
+					"targetYaw": -143.48
+                },
+				{
+                    "pitch": -1.374,
+                    "yaw": -114.52,
+                    "type": "scene",
+                    "sceneId": "room04_1",					
+                },
+                {
+                    "pitch": -18.87,
+                    "yaw": 178.96,
+                    "type": "scene",
+                    "sceneId": "room04_5",
+					"targetPitch": -16.313,
+					"targetYaw": 66.15
+                },	
+                {
+                    "pitch": 0.017,
+                    "yaw": 97.78,
+                    "type": "scene",
+                    "sceneId": "room04_2",					
+                }
+            ]
+        },
+
+        "room04_4": {
+            "title": "Tron Lab (Room 4)",
+            "hfov": 110,
+            "pitch": -10.35,
+            "yaw": -146.2075,
+            "type": "equirectangular",
+            "panorama": "/panorama/Labitat/LabiPano/room04_4.jpg",
+            "hotSpots": [
+                 {
+                    "pitch": 1.346,
+                    "yaw": 158.16,
+                    "type": "scene",
+                    "text": "Mediterranean Room",
+                    "sceneId": "room03_1",
+					"targetPitch": -8.63,
+					"targetYaw": -143.48
+                },                
+				{
+                    "pitch": -0.86,
+                    "yaw": 110.92,
+                    "type": "scene",
+                    "sceneId": "room04_1"
+                },
+				{
+                    "pitch": -18.94,
+                    "yaw": 171.78,
+                    "type": "scene",
+                    "sceneId": "room04_5",
+					"targetPitch": 1.93,
+					"targetYaw": -110.76					
+                },
+				{
+                    "pitch": -1.069,
+                    "yaw": -115.53,
+                    "type": "scene",
+                    "sceneId": "room04_2"
+                }
+            ]
+        },
+
+        "room04_5": {
+            "title": "Tron Lab (Room 4)",
+            "hfov": 120,
+            "pitch": -2.467,
+            "yaw": -20.86,
+            "type": "equirectangular",
+            "panorama": "/panorama/Labitat/LabiPano/room04_5.jpg",
+            "hotSpots": [
+                {
+                    "pitch": 3.898,
+                    "yaw": -133.9,
+                    "type": "scene",
+                    "text": "Mediterranean Room",
+                    "sceneId": "room03_1",
+					"targetPitch": -8.63,
+					"targetYaw": -143.48
+                },                
+				{
+                    "pitch": 1.6,
+                    "yaw": 167.98,
+                    "type": "scene",
+                    "sceneId": "room04_1"
+                },
+				{
+                    "pitch": 0.041,
+                    "yaw": -102.099,
+                    "type": "scene",
+                    "sceneId": "room04_3",
+					"targetPitch": -5.194,
+					"targetYaw": -14.498					
+                },
+				{
+                    "pitch": 1.898,
+                    "yaw": -17.26,
+                    "type": "scene",
+                    "sceneId": "room04_2"
+                },
+				{
+                    "pitch": -3.3098,
+                    "yaw": 64.34,
+                    "type": "scene",
+                    "sceneId": "room04_4",
+					"targetPitch": -7.659,
+					"targetYaw": -0.11					
+                }				
+            ]
+        }		
+	
+    }
+});
+</script>
+
+</body>
+</html>
