@@ -3,7 +3,7 @@ layout: project
 title: 'Magnet Connector'
 subtitle: 'Prototypes & Mockups'
 date: 2018-03-11 00:00:00
-description: Board is a stylish full-width masonry grid theme. Made for designers, artists, photographers and developers to show off their best work.
+description: 
 featured_image: '/images/projects/magnet-connector/mc-10.jpg'
 ---
 

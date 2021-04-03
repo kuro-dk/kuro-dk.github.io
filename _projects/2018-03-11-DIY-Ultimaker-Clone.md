@@ -3,7 +3,7 @@ layout: project
 title: 'DIY Ultimaker Clone'
 subtitle: 'Hacks & Contraptions'
 date: 2018-03-11 00:00:00
-description: Board is a stylish full-width masonry grid theme. Made for designers, artists, photographers and developers to show off their best work.
+description: 
 featured_image: '/images/projects/diy-um2/UM2-01.jpg'
 ---
 

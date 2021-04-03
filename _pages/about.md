@@ -2,7 +2,7 @@
 
 layout: about
 title: About Me
-description: Board is a stylish full-width masonry grid theme.
+description: Making the world better one googly at a time.
 featured_image: /images/IMG_01013.jpg
 ---
 
